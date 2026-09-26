@@ -3,12 +3,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Math Study</title>
+    <title>Happy Wheels</title>
     <style>
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #000; }
         #player { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
     </style>
-    <!-- Loads Ruffle directly from a public CDN -->
     <script src="https://unpkg.com"></script>
 </head>
 <body>
@@ -23,9 +22,9 @@
             const container = document.getElementById("player");
             container.appendChild(player);
             
-            // This pulls from a CORS-friendly itch.io storage mirror
+            // This loads the SWF directly from your own repository files
             player.load({
-                url: "https://gamedistribution.com",
+                url: "happyWheels.swf",
                 allowScriptAccess: true
             });
         });

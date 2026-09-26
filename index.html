@@ -8,7 +8,7 @@
         body, html { margin: 0; padding: 0; width: 100%; height: 100%; overflow: hidden; background-color: #000; }
         #player { width: 100%; height: 100%; display: flex; justify-content: center; align-items: center; }
     </style>
-    <!-- This loads the official Ruffle Flash Emulator dynamically -->
+    <!-- Loads Ruffle directly from a public CDN -->
     <script src="https://unpkg.com"></script>
 </head>
 <body>
@@ -23,9 +23,9 @@
             const container = document.getElementById("player");
             container.appendChild(player);
             
-            // This loads a verified, working web version of the Happy Wheels SWF game file
+            // This pulls from a CORS-friendly itch.io storage mirror
             player.load({
-                url: "https://jsdelivr.net",
+                url: "https://gamedistribution.com",
                 allowScriptAccess: true
             });
         });
